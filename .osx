@@ -62,6 +62,9 @@ defaults write com.apple.Mail DisableSendAnimations -bool true
 # Enable Dashboard dev mode (allows keeping widgets on the desktop)
 ##defaults write com.apple.dashboard devmode -bool true
 
+# hide everything from desktop
+defaults write com.apple.finder CreateDesktop -bool false
+
 # Reset Launchpad
 ##rm ~/Library/Application\ Support/Dock/*.db
 
@@ -69,7 +72,7 @@ defaults write com.apple.Mail DisableSendAnimations -bool true
 chflags nohidden ~/Library
 
 # Disable local Time Machine backups
-##sudo tmutil disablelocal
+sudo tmutil disablelocal
 
 # Kill affected applications
 for app in Safari Finder Dock Mail; do killall "$app"; done
