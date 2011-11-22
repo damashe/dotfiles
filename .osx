@@ -65,6 +65,9 @@ defaults write com.apple.Mail DisableSendAnimations -bool true
 # hide everything from desktop
 defaults write com.apple.finder CreateDesktop -bool false
 
+# show now playing track from itunes in doc
+defaults write com.apple.dock itunes-notifications -bool TRUE
+
 # Reset Launchpad
 ##rm ~/Library/Application\ Support/Dock/*.db
 
